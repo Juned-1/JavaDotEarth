@@ -1,0 +1,1 @@
+If project is not build using project builder like maven or gradle, then in this directory put jar file of external dependency or library (Eg: for mySQL connector jar of mySQL connector-J)
