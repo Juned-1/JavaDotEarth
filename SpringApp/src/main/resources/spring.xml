@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.SpringWithoutBootDemo.SpringApp.Dev" id="dev"
+		autowire="byType">
+		<!--property name="comp" ref="desk1"></property-->
+	</bean>
+	<bean class="com.SpringWithoutBootDemo.SpringApp.Laptop" id="comp"></bean>
+	<bean class="com.SpringWithoutBootDemo.SpringApp.Desktop" id="desk1"
+		primary="true">
+	</bean>
+
+
+</beans>
+
