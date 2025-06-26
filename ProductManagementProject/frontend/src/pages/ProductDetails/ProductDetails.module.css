@@ -1,0 +1,146 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f8f7fa;
+  padding: 3rem 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 32px rgba(86, 61, 124, 0.09);
+  max-width: 480px;
+  width: 100%;
+  padding: 2.2rem 2rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #563d7c;
+  margin: 0;
+}
+
+.brand {
+  font-size: 1rem;
+  color: #888;
+  font-style: italic;
+}
+
+.hr {
+  border: none;
+  border-top: 1px solid #e0d2f7;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.05rem;
+}
+
+.label {
+  color: #563d7c;
+  font-weight: 500;
+}
+
+.price {
+  color: #22223b;
+  font-weight: 600;
+}
+
+.description {
+  background: #f4f0fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+.description h4 {
+  margin: 0 0 0.5rem 0;
+  color: #452c6a;
+  font-size: 1.1rem;
+}
+
+.description p {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.btn {
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.5rem;
+  background: #563d7c;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+
+.btn:hover {
+  background: #452c6a;
+  color: #ffd700;
+}
+
+.btn:disabled {
+  background-color: #b0b0b0; /* gray for disabled */
+  color: #e0e0e0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
+.centered {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border: 4px solid #e0d2f7;
+  border-top: 4px solid #563d7c;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 1s linear infinite;
+}
+.stdetails{
+  color: #22223b;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    max-width: 98vw;
+  }
+  .container {
+    padding: 1.2rem 0.2rem;
+  }
+}
+

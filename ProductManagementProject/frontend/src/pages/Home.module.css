@@ -1,0 +1,97 @@
+.grid {
+  margin-top: 4.5rem; /* Adjust this value as needed */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 0.5rem; /* Reduced gap */
+  padding: 2.5rem 2rem 2rem 2rem;
+  justify-items: center;
+}
+
+.card {
+  width: 270px;
+  height: 210px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background: #fff;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(86, 61, 124, 0.13);
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.card-title {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #563d7c;
+}
+
+.card-brand {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.hr-line {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #e0d2f7;
+}
+
+.home-cart-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-text {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #22223b;
+}
+
+.btn-hover {
+  padding: 0.4rem 1.2rem;
+  border: none;
+  border-radius: 0.25rem;
+  background: #563d7c;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  margin: 10px 25px 0px;
+}
+
+.btn-hover:hover {
+  background: #452c6a;
+  color: #ffd700;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 1rem;
+  }
+  .card {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+}

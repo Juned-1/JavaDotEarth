@@ -1,0 +1,141 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--bg, #f8f9fa);
+  padding: 3rem 1rem;
+}
+
+.form {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 32px rgba(86, 61, 124, 0.09);
+  max-width: 480px;
+  width: 100%;
+  padding: 2.2rem 2rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #563d7c;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+label {
+  font-weight: 500;
+  color: #452c6a;
+  margin-bottom: 0.2rem;
+}
+
+.input,
+.textarea {
+  border-radius: 0.3rem;
+  border: 1px solid #e0d2f7;
+  padding: 0.45rem 0.8rem;
+  font-size: 1rem;
+  background: #f8f9fa;
+  color: #222;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(86, 61, 124, 0.08);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border: 1.5px solid #563d7c;
+  background: #fff;
+}
+
+.textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.button {
+  margin-top: 1.2rem;
+  padding: 0.7rem 1.5rem;
+  background: #563d7c;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.button:hover:not(:disabled) {
+  background: #452c6a;
+  color: #ffd700;
+}
+
+.error {
+  color: #d32f2f;
+  background: #ffeaea;
+  border: 1px solid #f8d7da;
+  padding: 0.7rem 1rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+
+.imageButton {
+  margin-top: 0.3rem;
+  padding: 0.5rem 1.1rem;
+  background: #563d7c;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  display: inline-block;
+}
+
+.imageButton:hover {
+  background: #452c6a;
+  color: #ffd700;
+}
+
+.imagePreviewWrapper {
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.imagePreview {
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 0.4rem;
+  border: 1px solid #e0d2f7;
+  box-shadow: 0 2px 8px rgba(86, 61, 124, 0.08);
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .form {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    max-width: 98vw;
+  }
+  .container {
+    padding: 1.2rem 0.2rem;
+  }
+}

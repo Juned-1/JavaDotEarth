@@ -1,0 +1,217 @@
+.navbar {
+  background: #563d7c; /* Bootstrap purple */
+  margin: 0;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 1030;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-brand {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff !important;
+  margin-right: 1.5rem;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 400;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  background: none;
+  border: none;
+  outline: none;
+  display: block;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: #452c6a;
+  color: #fff !important;
+}
+
+.theme-btn {
+  background: #fff;
+  border: 1.5px solid #563d7c;
+  color: #563d7c;
+  font-size: 1.2rem;
+  margin-right: 0.7rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0.3rem 0.6rem;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: 0 1px 4px rgba(86, 61, 124, 0.08);
+}
+
+.theme-btn:hover {
+  background: #563d7c;
+  color: #ffd700;
+  border-color: #452c6a;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;      /* Space between cart and search bar */
+  margin-left: auto;
+  padding-left: 2rem; /* Add this line for extra space between nav and right-section */
+  padding-right: 3rem;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  color: #563d7c;
+  font-weight: 500;
+  font-size: 1rem;
+  background: #fff;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.9rem;
+  box-shadow: 0 1px 4px rgba(86, 61, 124, 0.08);
+  border: 1px solid #e0d2f7;
+  cursor: pointer; /* Add this line */
+}
+
+.cart i {
+  color: #563d7c; /* icon color */
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.form-control {
+  border-radius: 0.3rem;
+  border: 1px solid #e0d2f7;
+  padding: 0.35rem 0.8rem;
+  font-size: 1rem;
+  min-width: 120px;
+  background: #fff;
+  color: #222;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(86, 61, 124, 0.08);
+  padding-right: 2.5rem; /* Make space for the icon */
+}
+
+.form-control:focus {
+  outline: none;
+  border: 1.5px solid #563d7c;
+  background: #fff;
+  color: #222;
+}
+
+.navbar-collapse {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Add or adjust as needed */
+.search-btn {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  right: 2.2rem;
+  color: #563d7c;
+  font-size: 1.1rem;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e0d2f7;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 8px rgba(86, 61, 124, 0.08);
+  z-index: 10;
+  list-style: none;
+  margin: 0;
+  padding: 0.2rem 0;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.search-dropdown-item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #563d7c;
+  transition: background 0.2s;
+}
+
+.search-dropdown-item:hover {
+  background: #f3e9ff;
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    padding: 0.4rem 0.5rem;
+    position: static;
+  }
+  .container-fluid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+  .right-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem; /* More vertical space between cart and search bar */
+    margin-left: 0;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .cart {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+    justify-content: flex-start;
+    margin-right: 0; /* Remove right margin on mobile */
+  }
+  .form-control {
+    min-width: 100px;
+    margin-left: 0;
+    margin-top: 0.3rem;
+    width: 100%;
+    padding-right: 1rem;
+  }
+  .navbar-collapse {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

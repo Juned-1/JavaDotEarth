@@ -1,0 +1,30 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.light-theme {
+  background: #f8f9fa !important;
+  color: #222 !important;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+  background: #22223b !important;
+  color: #f8f9fa !important;
+  transition: background 0.3s, color 0.3s;
+}
