@@ -20,6 +20,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import com.SpringSecurity.demo.Filters.JWTFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -27,6 +30,9 @@ public class SecurityConfig {
 
     @Autowired
     private UserDetailsService userDetailsService;
+
+    @Autowired
+    private JWTFilter jwtFilter;
 
     @Bean
     public SecurityFilterChain securityChain(HttpSecurity httpSecurity) throws Exception{
@@ -63,6 +69,7 @@ public class SecurityConfig {
         //httpSecurity.formLogin(Customizer.withDefaults()); //enable default form
         .httpBasic(Customizer.withDefaults()) //enable basic authentication for rest API access
         .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+        .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
         .build();
     }
 
